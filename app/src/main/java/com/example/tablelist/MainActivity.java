@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // add data for displaying in expandable list view
         loadData();
 
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
         simpleExpandableListView.setAdapter(listAdapter);
 
         //expand all the Groups
-        expandAll();
+        //expandAll();
 
         // setOnChildClickListener listener for child row click
         simpleExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
@@ -66,17 +65,15 @@ public class MainActivity extends AppCompatActivity{
                 return false;
             }
         });
-
-
     }
 
-    //method to expand all groups
-    private void expandAll() {
-        int count = listAdapter.getGroupCount();
-        for (int i = 0; i < count; i++){
-            simpleExpandableListView.expandGroup(i);
-        }
-    }
+////    //method to expand all groups
+//    private void expandAll() {
+//        int count = listAdapter.getGroupCount();
+//        for (int i = 0; i < count; i++){
+//            simpleExpandableListView.expandGroup(i);
+//        }
+//    }
 
     //method to collapse all groups
     private void collapseAll() {
